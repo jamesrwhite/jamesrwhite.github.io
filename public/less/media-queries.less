@@ -1,4 +1,4 @@
-@media (max-width: 1024px) {
+@media (max-width: 1024px), (max-device-width: 1024px) {
 
 	.container {
 		width: 100%;
@@ -15,7 +15,7 @@
 
 }
 
-@media (max-width: 550px) {
+@media (max-width: 550px), (max-device-width: 550px) {
 
 	#page-header, #main-header {
 		height: auto;
@@ -31,35 +31,61 @@
 		-o-transition: none;
 		-webkit-transition: none;
 		transition: none;
+
+		&:hover {
+			background: transparent;
+		}
 	}
 
 	#main-nav {
 		clear: both;
-		width: 90%;
 		float: none;
 		margin: auto;
 		padding-bottom: 10px;
 		
 		li {
-			width: 33.33%;
+			width: 32%;
 			padding: 0;
 			margin: 0;
+			display: inline-block;
 			text-align: center;
+			float: none;
+			line-height: auto;
 
 			a {
-				float: none;
 				line-height: 1.5;
+				padding: 0;
 				-moz-transition: none;
 				-ms-transition: none;
 				-o-transition: none;
 				-webkit-transition: none;
 				transition: none;
+
+				&:hover {
+					background: transparent;
+				}
 			}
 		}
 	}
 
 	#main-footer {
-		position: relative;
+		position: static;
+		max-height: none;
+
+		span, ul {
+			display: block;
+			float: none;
+			text-align: center;
+		}
+
+		ul {
+			padding-top: 20px;
+		}
+
+		li {
+			float: none;
+			display: inline-block;
+		}
 	}
 
 }

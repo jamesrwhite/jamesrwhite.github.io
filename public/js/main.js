@@ -1,4 +1,4 @@
-$(function() {
+$(window).load(function() {
 
 	function randomise_background() {
 
