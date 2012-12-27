@@ -5,6 +5,7 @@ $(function() {
 		var background_colours = [
 				"#2C96AF",	// Turquiose
 				"#702F92",	// Purple
+				"#1C1D20",	// Dark Grey
 				"#AA2F34",	// Red
 				"#2D44AA",	// Blue
 				"#447C2B"	// Green
