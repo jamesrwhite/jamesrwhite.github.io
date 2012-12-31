@@ -23,12 +23,11 @@ $(window).load(function() {
 	function randomise_background() {
 
 		var background_colours = [
-				"#2C96AF",	// Turquiose
+				"#447C2B",	// Green
 				"#702F92",	// Purple
-				"#1C1D20",	// Dark Grey
+				"#2C96AF",	// Turquiose
 				"#AA2F34",	// Red
-				"#2D44AA",	// Blue
-				"#447C2B"	// Green
+				"#2D44AA"	// Blue
 			],
 			$body = $("body"),
 			random_index;
@@ -51,7 +50,7 @@ $(window).load(function() {
 
 					random_index = get_random_index(background_colours.length);
 
-				} while (random_index === localStorage["background_colour"]);
+				} while (random_index == localStorage["background_colour"]);
 
 			}
 
