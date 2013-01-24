@@ -1,10 +1,38 @@
-$(window).load(function() {
+$(document).ready(function() {
+
+	"use strict";
+
+	// Detecting Base64 Encoded Image Support
+	(function() {
+
+		var img = new Image();
+
+		img.onload = img.onerror = function(){
+			
+			var $this = $(this);
+
+			if (img.width !== 1 || img.height !== 1) {
+
+				$("body img").attr("src", function(index, attr) {
+
+					return $this.attr("data-fallback-src");
+
+				});
+
+			}
+
+		};
+
+		// Test image to try and load
+		img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+
+	}());
 
 	function supports_local_storage() {
 
 		try {
 
-			return 'localStorage' in window && window['localStorage'] !== null;
+			return window["localStorage"] !== undefined;
 
 		} catch (e) {
 
@@ -23,11 +51,9 @@ $(window).load(function() {
 	function randomise_background() {
 
 		var background_colours = [
-				"#447C2B",	// Green
-				"#702F92",	// Purple
-				"#2C96AF",	// Turquiose
-				"#AA2F34",	// Red
-				"#2D44AA"	// Blue
+				"rgb(38, 53, 92)", // Blue
+				"rgb(70, 38, 92)", // Purple
+				"rgb(38, 79, 92)" // Turquoise?
 			],
 			$body = $("body"),
 			random_index;
@@ -38,7 +64,7 @@ $(window).load(function() {
 			var local_storage = window.localStorage;
 
 			// If they don't have a value stored, we can just pick a random one
-			if (localStorage["background_colour"] === undefined) {
+			if (localStorage["background-colour"] === undefined) {
 
 				random_index = get_random_index(background_colours.length);
 
@@ -50,12 +76,12 @@ $(window).load(function() {
 
 					random_index = get_random_index(background_colours.length);
 
-				} while (random_index == localStorage["background_colour"]);
+				} while (random_index == localStorage["background-colour"]);
 
 			}
 
 			// Store the value for next time
-			localStorage["background_colour"] = random_index;
+			localStorage["background-colour"] = random_index;
 
 		// If they don't support localStorage just pick a random colour and hope for
 		// the best!
