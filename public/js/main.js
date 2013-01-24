@@ -9,15 +9,17 @@ $(document).ready(function() {
 
 		img.onload = img.onerror = function(){
 			
-			var $this = $(this);
-
 			if (img.width !== 1 || img.height !== 1) {
 
 				$("body img").attr("src", function(index, attr) {
 
-					return $this.attr("data-fallback-src");
+					return $(this).attr("data-fallback-src");
 
 				});
+
+			} else {
+
+				document.body.classname += " no-base64";
 
 			}
 
