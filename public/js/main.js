@@ -5,9 +5,9 @@ $(document).ready(function() {
 	// Detecting Base64 Encoded Image Support
 	(function() {
 
-		var img = new Image();
+		var img = new Image;
 
-		img.onload = img.onerror = function(){
+		img.onload = img.onerror = function() {
 			
 			if (img.width !== 1 || img.height !== 1) {
 
