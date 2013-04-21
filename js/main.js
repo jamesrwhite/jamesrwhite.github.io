@@ -53,9 +53,9 @@ $(document).ready(function() {
 	function randomise_background() {
 
 		var background_colours = [
-				"rgb(38, 53, 92)", // Blue
-				"rgb(70, 38, 92)", // Purple
-				"rgb(38, 79, 92)" // Turquoise?
+				"rgb(86, 56, 163)", // Purple
+				"rgb(162, 43, 43)", // Red
+				"rgb(56, 82, 163)" // Blue
 			],
 			$body = $("body"),
 			random_index;
