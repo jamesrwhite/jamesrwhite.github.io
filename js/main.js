@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	"use strict";
+	'use strict';
 
 	// Detecting Base64 Encoded Image Support
 	(function() {
@@ -11,22 +11,22 @@ $(document).ready(function() {
 			
 			if (img.width !== 1 || img.height !== 1) {
 
-				$("body img").attr("src", function(index, attr) {
+				$('body img').attr('src', function(index, attr) {
 
-					return $(this).attr("data-fallback-src");
+					return $(this).attr('data-fallback-src');
 
 				});
 
 			} else {
 
-				document.body.classname += " no-base64";
+				document.body.classname += ' no-base64';
 
 			}
 
 		};
 
 		// Test image to try and load
-		img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+		img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
 
 	}());
 
@@ -34,7 +34,7 @@ $(document).ready(function() {
 
 		try {
 
-			return window["localStorage"] !== undefined;
+			return window['localStorage'] !== undefined;
 
 		} catch (e) {
 
@@ -53,11 +53,11 @@ $(document).ready(function() {
 	function randomise_background() {
 
 		var background_colours = [
-				"rgb(86, 56, 163)", // Purple
-				"rgb(162, 43, 43)", // Red
-				"rgb(56, 82, 163)" // Blue
+				'rgb(86, 56, 163)', // Purple
+				'rgb(162, 43, 43)', // Red
+				'rgb(56, 82, 163)' // Blue
 			],
-			$body = $("body"),
+			$body = $('body'),
 			random_index;
 
 		// Is localStorage supported by the client?
@@ -66,7 +66,7 @@ $(document).ready(function() {
 			var local_storage = window.localStorage;
 
 			// If they don't have a value stored, we can just pick a random one
-			if (localStorage["background-colour"] === undefined) {
+			if (localStorage['background-colour'] === undefined) {
 
 				random_index = get_random_index(background_colours.length);
 
@@ -78,12 +78,12 @@ $(document).ready(function() {
 
 					random_index = get_random_index(background_colours.length);
 
-				} while (random_index == localStorage["background-colour"]);
+				} while (random_index == localStorage['background-colour']);
 
 			}
 
 			// Store the value for next time
-			localStorage["background-colour"] = random_index;
+			localStorage['background-colour'] = random_index;
 
 		// If they don't support localStorage just pick a random colour and hope for
 		// the best!
@@ -95,15 +95,15 @@ $(document).ready(function() {
 
 		// Set the random background colour
 		$body.animate({
-			"background-color": background_colours[random_index]
+			'background-color': background_colours[random_index]
 		}, 1500);
 
 		// Fade out and hide the overlay
-		$("#overlay").fadeOut(1500, function() {
+		$('#overlay').fadeOut(1500, function() {
 
 			$(this).css({
 				zIndex: -1,
-				display: "none"
+				display: 'none'
 			});
 
 		});

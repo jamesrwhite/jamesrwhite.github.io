@@ -8,7 +8,7 @@
 		<meta name="apple-mobile-web-app-capable" content="yes"/>
 		<script>
 			// This has been inlined so it happens asap
-			window.addEventListener("load", function() {
+			window.addEventListener('load', function() {
 				setTimeout(function(){
 					window.scrollTo(0, 0);
 				}, 0);
@@ -41,15 +41,11 @@
 					<ul>
 
 						<li>
-							<a href="#">
-								<del>Projects</del>
-							</a>
+							<a href="javascript:void(0)">About</a>
 						</li>
 
 						<li>
-							<a href="#">
-								<del>Experiments</del>
-							</a>
+							<a href="javascript:void(0)">Projects</a>
 						</li>
 						
 						<li>
@@ -93,7 +89,7 @@
 					</li>
 
 				</ul>
-				
+
 				<h2>What?</h2>
 
 				<ul class="thumbs">
@@ -186,17 +182,17 @@
 		<script defer src="js/main.js"></script>
 		<script type="text/javascript">
 			var GoSquared = {};
-			GoSquared.acct = "GSN-139263-P";
+			GoSquared.acct = 'GSN-139263-P';
 			(function(w){
 				function gs(){
 					w._gstc_lt = +new Date;
-					var d = document, g = d.createElement("script");
-					g.type = "text/javascript";
-					g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";
+					var d = document, g = d.createElement('script');
+					g.type = 'text/javascript';
+					g.src = '//d1l6p2sc9645hc.cloudfront.net/tracker.js';
 					var s = d.getElementsByTagName("script")[0];
 					s.parentNode.insertBefore(g, s);
 				}
-				w.addEventListener ? w.addEventListener("load", gs, false) : w.attachEvent("onload", gs);
+				w.addEventListener ? w.addEventListener('load', gs, false) : w.attachEvent('onload', gs);
 			})(window);
 		</script>
 
