@@ -19,9 +19,7 @@ $(document).ready(function() {
 
 			});
 
-		} else {
-
-			document.body.classname += ' no-base64';
+			document.body.className = 'no-base64';
 
 		}
 
