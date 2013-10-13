@@ -86,7 +86,7 @@ $(document).ready(function() {
 				'#experiments': $('#scroll-container').find('> #about').height() + $('#scroll-container').find('> #projects').height()
 			};
 
-			$('#scroll-container').animate({marginTop: '-' + offsets[target] + 'px'}, 500);
+			$('html, body').scrollTop(0).find('#scroll-container').animate({top: '-' + offsets[target] + 'px'}, 500);
 
 			return false;
 
