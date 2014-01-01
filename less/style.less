@@ -8,7 +8,7 @@
 @white: #f1f1f1;
 @max-width: 800px;
 
-// Use a box model that isn't retarded
+// Use a box model that isn't stupid
 * {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -71,30 +71,6 @@ body {
 	}
 }
 
-// Navigation
-#main-nav {
-	float: right;
-
-	li {
-		float: left;
-		line-height: 88px;
-	}
-
-	a {
-		color: #fff;
-		padding: 0 20px;
-		text-shadow: 1px 1px #000;
-		text-decoration: none;
-		font-size: 1.2em;
-		display: block;
-
-		&:hover {
-			cursor: pointer; // Force it!
-			background: rgba(0, 0, 0, .2);
-		}
-	}
-}
-
 // Tools
 .width-50 {
 	width: 49%;
@@ -121,13 +97,13 @@ body {
 		padding-bottom: 65px;
 		min-height: 100%;
 	}
-	
+
 	h2 {
 		font-size: 3em;
 		padding: .7em 0;
 		font-family: "Droid Sans", "Myriad Pro", Helvetica, sans;
 	}
-	
+
 	p {
 		line-height: 1.6;
 		font-size: 1.2em;
@@ -155,17 +131,8 @@ body {
 				padding-top: 1em;
 			}
 
-			// Horizontally centering
-			.overlay:before {
-				content: "";
-				display: inline-block;
-				height: 100%;
-				vertical-align: middle;
-				margin-right: -0.25em;
-			}
-
 			.overlay {
-				display: none;
+				display: table;
 				opacity: 0;
 				position: absolute;
 				top: 15px;
@@ -175,18 +142,20 @@ body {
 				background: rgba(0, 0, 0, .8);
 				z-index: 10;
 
-				span {
-					font-size: .85em;
+				p {
+					font-size: .9em;
+					display: table-cell;
+					vertical-align: middle;
+					text-align: center;
 				}
 			}
 		}
 
 		li:hover {
-			background: rgba(0, 0, 0, .3);
+			background: rgba(0, 0, 0, .5);
 		}
 
 		li:hover .overlay {
-			display: block;
 			opacity: 1;
 		}
 	}
