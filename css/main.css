@@ -578,6 +578,15 @@ a {
   #main-nav li a:hover {
     background: transparent;
   }
+  #main-content {
+    text-align: center;
+  }
+  #main-content > .container {
+    padding-top: 20px;
+  }
+  #main-content h2 {
+    display: none;
+  }
   #main-footer {
     position: static;
     max-height: none;
