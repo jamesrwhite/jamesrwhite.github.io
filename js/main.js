@@ -61,7 +61,7 @@ $(document).ready(function() {
 
 			$body.animate({
 				'background-color': getColour()
-			}, 100, animateColour);
+			}, 200, animateColour);
 
 		}
 
