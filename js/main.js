@@ -31,7 +31,7 @@ $(document).ready(function() {
 	// Handling the background colour
 	var $body = $('body'),
 		hue = Math.round(Math.random() * 359),
-		saturation = '39%',
+		saturation = '20%',
 		lightness = '34%';
 
 	// Helper to return an incremented HSL value
@@ -61,7 +61,7 @@ $(document).ready(function() {
 
 			$body.animate({
 				'background-color': getColour()
-			}, 200, animateColour);
+			}, 132, animateColour);
 
 		}
 
