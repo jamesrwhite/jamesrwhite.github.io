@@ -451,6 +451,7 @@ a {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+  padding: 0 5px;
 }
 #main-content .thumbs li:hover {
   background: rgba(0, 0, 0, 0.5);
