@@ -10,19 +10,13 @@ $(document).ready(function() {
 
 	// Callbacks that are triggered when an image is loaded or fails to load
 	img.onload = img.onerror = function() {
-
 		if (img.width !== 1 || img.height !== 1) {
-
 			$('body img').attr('src', function(index, attr) {
-
 				return $(this).attr('data-fallback-src');
-
 			});
 
 			document.body.className = 'no-base64';
-
 		}
-
 	};
 
 	// Test image to try and load
@@ -36,10 +30,9 @@ $(document).ready(function() {
 
 	// Helper to return an incremented HSL value
 	function getColour() {
-
 		hue++;
-		return 'hsl(' + hue + ', ' + saturation + ', ' + lightness + ')';
 
+		return 'hsl(' + hue + ', ' + saturation + ', ' + lightness + ')';
 	}
 
 	// Set the random background colour
@@ -49,7 +42,6 @@ $(document).ready(function() {
 
 	// Fade out the overlay
 	$('#overlay').fadeOut(2000, function() {
-
 		// Remove it from the layout completely
 		$(this).css({
 			zIndex: -1,
@@ -58,15 +50,11 @@ $(document).ready(function() {
 
 		// Recursive function to animate background colour
 		function animateColour() {
-
 			$body.animate({
 				'background-color': getColour()
 			}, 132, animateColour);
-
 		}
 
 		animateColour();
-
 	});
-
 });
