@@ -25,8 +25,8 @@ $(document).ready(function() {
 	// Handling the background colour
 	var $body = $('body'),
 		hue = Math.round(Math.random() * 359),
-		saturation = '20%',
-		lightness = '34%';
+		saturation = '15%',
+		lightness = '15%';
 
 	// Helper to return an incremented HSL value
 	function getColour() {
